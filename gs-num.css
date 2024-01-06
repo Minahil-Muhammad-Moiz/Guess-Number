@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+    background-color:  rgb(5, 5, 44); 
+    position: relative;
+    overflow-y: hidden;
+} 
+.container{
+    width: 500px;
+    height: 400px;
+    background-color: rgb(51, 51, 82);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgb(175, 175, 175);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container::before{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: radial-gradient( rgb(175, 175, 175) ,rgb(51, 51, 82)); 
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1; 
+    left: -25px; 
+    animation: crc1 1s ease-in-out infinite alternate;
+}
+
+.container::after{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: radial-gradient( rgb(175, 175, 175) ,rgb(51, 51, 82)); 
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1; 
+    right: -25px;
+    animation: crc2 1s ease-in-out infinite alternate;
+}
+
+@keyframes crc1{
+    0%{
+        top: 350px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes crc2{
+    0%{
+        bottom: 350px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+h1{
+    margin: 20px auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    /* border: 6px solid rgb(158, 158, 158); */
+}
+
+
+#input{
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+button{
+    border-radius: 8px;
+    background-color:whitesmoke;
+    color: rgb(5, 5, 44); 
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+#remarks{
+    font-style: italic;
+    margin: 20px auto;
+    /* border: 1px solid; */
+} 
+
+p{
+    margin: 0.5rem;
+    font-family: sans-serif;
+}
+
+#newgame {
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 0.2rem;
+    background-color:  rgb(5, 5, 44);
+    border-radius: 10px;
+    padding: 0.2rem;
+    margin: 1rem auto;
+}

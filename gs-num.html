@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gs-num.css" />
+    <title>Document</title>
+  </head>
+  <body class="hero">
+    <div class="container">
+      <form class="game">
+        <h1>Guess The Number</h1>
+        <p>Guess Number between 1 and 100</p>
+        <p>You have 10 attempts for guessing</p>
+        <input
+          type="number"
+          id="input"
+          min="1"
+          max="100"
+          placeholder="i.e: 1-100"
+          required
+        />
+        <button id="submit">Submit</button>
+      </form>
+      <div id="remarks">
+        <p>Previous Guesses <span id="previous-guesses"></span>
+        </p>
+        <p >Remaining Guesses = <span id="guess-remaining">10</span></p>
+        <p id="endres">RESULT</p>
+      </div>
+    </div>
+    <script src="gs-num.js"></script>
+  </body>
+</html>
